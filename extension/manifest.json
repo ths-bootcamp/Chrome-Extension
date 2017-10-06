@@ -1,23 +1,19 @@
 {
   "manifest_version": 2,
-  "name": "Test Extension",
-  "version": "0.0",
 
+  "name": "Getting started example",
+  "description": "This extension allows the user to change the background color of the current page.",
+  "version": "1.0",
   "background": {
     "persistent": false,
     "scripts": ["background.js"]
   },
-  "content_scripts": [{
-    "matches": ["*://*.stackoverflow.com/*"],
-    "js": ["content.js"]
-  }],
   "browser_action": {
-    "default_title": "Test Extension",
     "default_popup": "index.html"
   },
-
   "permissions": [
-    "tabs",
-    "activeTab"
+    "activeTab",
+    "storage",
+    "tabs"
   ]
 }
