@@ -1,22 +1,25 @@
 {
   "manifest_version": 2,
 
-  "name": "Getting started example",
-  "description": "This extension allows the user to change the background color of the current page.",
+  "name": "Kites",
+  "description": "filter inappropriate Words! and sentiment analysis",
   "version": "1.0",
   "background": {
     "persistent": false,
     "scripts": ["background.js"]
   },
   "content_scripts": [{
+    "run_at": "document_end",
     "matches": ["<all_urls>"],
-    "js": ["content.js"]
+    "js": ["jquery-3.2.1.min.js","content.js"]
   }],
   "browser_action": {
     "default_title": "Test Extension"
   },
   "permissions": [
+    "webNavigation",
     "activeTab",
+    "*://*/*",
     "storage",
     "tabs"
   ]
