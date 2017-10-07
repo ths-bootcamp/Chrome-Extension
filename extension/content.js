@@ -18,9 +18,6 @@ var badWords = ["4r5e", "5h1t", "5hit", "a55", "anal", "anus", "ar5e", "arrse", 
 var re = new RegExp(badWords.join("|"), "i");
 
 setInterval(function(){
-
-
-
     $.each($("yt-formatted-string"), function(i,ele){
         console.log(ele.innerHTML)
 

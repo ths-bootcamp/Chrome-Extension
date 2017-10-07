@@ -8,6 +8,13 @@ function doStuffWithDom(domContent) {
     console.log('I received the following DOM content:\n' + domContent);
 }
 
+function hello() {
+    chrome.tabs.executeScript({
+        file: 'content.js'
+    });
+}
+document.getElementById('btn1').addEventListener('click', hello);
+
 // When the browser-action button is clicked...
 // chrome.webNavigation.onCompleted.addListener(function (tab) {
 //     // ...check the URL of the active tab against our pattern and...

@@ -11,10 +11,11 @@
   "content_scripts": [{
     "run_at": "document_end",
     "matches": ["<all_urls>"],
-    "js": ["jquery-3.2.1.min.js","content.js"]
+    "js": ["jquery-3.2.1.js","content.js"]
   }],
   "browser_action": {
-    "default_title": "Test Extension"
+    "default_title": "Test Extension",
+    "default_popup": "popup.html"
   },
   "permissions": [
     "webNavigation",
